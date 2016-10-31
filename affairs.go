@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"strings"
+	//"time"
 )
 
 func main() {
@@ -25,7 +27,11 @@ func main() {
 	}
 
 	str := string(bs)
-	//fmt.Println(str)
 	str_arr := strings.Split(str, "\n")
+
 	fmt.Println(str_arr)
+	//r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	rand_affair_num := rand.Intn(len(str_arr) - 1)
+	fmt.Println(str_arr)
+	fmt.Println(str_arr[rand_affair_num])
 }
