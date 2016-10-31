@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -24,5 +25,7 @@ func main() {
 	}
 
 	str := string(bs)
-	fmt.Println(str)
+	//fmt.Println(str)
+	str_arr := strings.Split(str, "\n")
+	fmt.Println(str_arr)
 }
